@@ -31,3 +31,6 @@ install:
 script:
     - ls -d src/Symfony/*/* | parallel --gnu --keep-order 'echo "Running {} tests"; phpunit --exclude-group tty,benchmark {};'
     - echo "Running tests requiring tty"; phpunit --group tty
+
+notifications:
+  email: buildsampletest@gmail.com
